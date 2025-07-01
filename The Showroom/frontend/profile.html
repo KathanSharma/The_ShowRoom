@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>THE SHOWROOM | Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .profile-section{background:#fff;padding:40px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);margin-bottom:60px}
+    .profile-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:35px}
+    .profile-user{display:flex;align-items:center;gap:18px}
+    .profile-user h2{margin-bottom:4px}
+    .user-role{color:#7f8c8d;font-size:.95rem}
+    .avatar{width:70px;height:70px;border-radius:50%;object-fit:cover}
+    .edit-btn{background-color:#3b7cff;color:#fff;border:none;padding:8px 22px;border-radius:6px;font-size:.9rem;cursor:pointer;transition:background-color .25s ease}
+    .edit-btn:hover{background-color:#2a5fd6}
+    .sub-heading{font-size:1.2rem;margin:25px 0 15px;color:#2c3e50}
+    .grid.two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px 25px}
+    @media(max-width:600px){.profile-section{padding:25px 20px}.profile-header{flex-direction:column;align-items:flex-start;gap:15px}.edit-btn{align-self:stretch;width:100%;text-align:center}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo"><img src="images/Sho.png" alt="THE SHOWROOM logo" /><span></span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="section-title">Profile Information</h1>
+
+  <section class="profile-section container">
+    <div class="profile-header">
+      <div class="profile-user">
+        <img src="images/avatarr.jpg" alt="User photo" class="avatar" />
+        
+      </div>
+      <button type="button" class="edit-btn" onclick="document.getElementById('profile-form').scrollIntoView({behavior:'smooth'})">Edit</button>
+    </div>
+
+    <!-- Form -->
+    <form id="profile-form" class="profile-form">
+      <h3 class="sub-heading">Personal Details</h3>
+      <div class="grid two-col">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" />
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <input type="text" id="bio" />
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="text" id="gender" />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" />
+        </div>
+        <div class="form-group">
+          <label for="nationalId">National ID</label>
+          <input type="text" id="nationalId" />
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Address</h3>
+      <div class="grid two-col">
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input type="text" id="country" />
+        </div>
+        <div class="form-group">
+          <label for="city">City/State</label>
+          <input type="text" id="city" />
+        </div>
+        <div class="form-group">
+          <label for="postal">Postal Code</label>
+          <input type="text" id="postal" />
+        </div>
+        <div class="form-group">
+          <label for="taxId">TAX ID</label>
+          <input type="text" id="taxId" />
+        </div>
+      </div>
+
+      <button type="submit" class="save-profile-btn">Save Changes</button>
+      <span id="save-msg" class="save-msg"></span>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 THE SHOWROOM. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook" /></a></li>
+        <li><a href="images/x-0muuxjzgzvtlpaduv3p4k2s.webp"><img src="images/x-0muuxjzgzvtlpaduv3p4k2s.webp" alt="Twitter" /></a></li>
+        <li><a href="images/instagram.png"><img src="images/instagram.png" alt="Instagram" /></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>
